@@ -14,6 +14,7 @@ const connect = function () {
 
   conn.on("connect", () => {
     console.log('connection to game server established')
+    conn.write('Name: CAM');
   });
 
   conn.on('data', (data) => {
