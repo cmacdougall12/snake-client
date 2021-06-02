@@ -15,7 +15,7 @@ const connect = function () {
   conn.on("connect", () => {
     console.log('connection to game server established')
     conn.write('Name: CAM');
-    // setInterval(function(){conn.write('Move: up')},50);
+   
   });
 
   conn.on('data', (data) => {
@@ -26,11 +26,10 @@ const connect = function () {
 
 };
 
-console.log("Connecting ...");
-connect();
-
 module.exports = connect;
 
+
+ // setInterval(function(){conn.write('Move: up')},50);
 // "Move: up" - move up one square (unless facing down)
 // "Move: down" - move down one square (unless facing up)
 // "Move: left" - move left one square (unless facing right)
